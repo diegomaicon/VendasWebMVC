@@ -17,5 +17,10 @@ namespace VendasWebMVCAsp.Services
         {
             return _context.Seller.ToList();
         }
+
+        public void Indsert(Seller obj) {
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
     }
 }

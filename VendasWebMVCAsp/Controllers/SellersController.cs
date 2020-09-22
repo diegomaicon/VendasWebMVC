@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using VendasWebMVCAsp.Models;
 using VendasWebMVCAsp.Services;
 
 namespace VendasWebMVCAsp.Controllers
@@ -19,6 +20,18 @@ namespace VendasWebMVCAsp.Controllers
         {
             var list = _sellerService.FindAll();    
             return View(list);
+        }
+
+        public IActionResult Create() {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Seller seller)
+        {
+            _sellerService.Indsert(seller);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
