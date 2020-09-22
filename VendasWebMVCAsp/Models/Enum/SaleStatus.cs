@@ -1,6 +1,6 @@
 ﻿namespace VendasWebMVCAsp.Models.Enum
 {
-    public enum SaleRecord : int
+    public enum SaleStatus : int
     {
         Pending = 0,
         Billed = 1,
