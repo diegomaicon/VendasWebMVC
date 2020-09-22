@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using VendasWebMVCAsp.Models;
 using VendasWebMVCAsp.Data;
+using VendasWebMVCAsp.Services;
 
 namespace VendasWebMVCAsp
 {
@@ -42,6 +43,7 @@ namespace VendasWebMVCAsp
                       builder.MigrationsAssembly("VendasWebMVCAsp")));
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
 
         }
 
