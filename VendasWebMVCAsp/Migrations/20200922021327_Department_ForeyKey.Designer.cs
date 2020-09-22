@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VendasWebMVCAsp.Models;
 
 namespace VendasWebMVCAsp.Migrations
 {
     [DbContext(typeof(VendasWebMVCAspContext))]
-    partial class VendasWebMVCAspContextModelSnapshot : ModelSnapshot
+    [Migration("20200922021327_Department_ForeyKey")]
+    partial class Department_ForeyKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
